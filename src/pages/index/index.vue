@@ -1,29 +1,30 @@
 <template>
-	<div @click="clickHandle">
-		<p class="title">
-			我是第一个
-			<span>我是第二个</span>
-		</p>
-	</div>
+  <div @click="clickHandle">
+    <p class="title">
+      我是第一个
+      <span>我是第二个</span>
+    </p>
+  </div>
 </template>
 
 <script>
-
 export default {
-  data () {
+  data() {
     return {
-      name: 'mpvue'
-    }
+      name: "mpvue"
+    };
   },
 
   methods: {
-
+    tt() {
+      console(11123);
+    }
   },
 
-  created () {
-    // let app = getApp()
+  created() {
+    let app = getApp();
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -39,5 +40,4 @@ p {
     color: #f00;
   }
 }
-
 </style>

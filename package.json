@@ -9,7 +9,7 @@
     "dev": "node build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
-    "precommit": "lint-staged"
+    "pretty-quick": "pretty-quick"
   },
   "dependencies": {
     "mpvue": "^2.0.0",
@@ -47,7 +47,8 @@
     "portfinder": "^1.0.13",
     "postcss-loader": "^2.1.4",
     "postcss-mpvue-wxss": "^1.0.0",
-    "prettier": "~1.12.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "px2rpx-loader": "^0.1.10",
     "relative": "^3.0.2",
     "rimraf": "^2.6.0",
@@ -73,7 +74,9 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "lint-staged": {
-    "*.{vue,js,json,css,scss}": ["prettier --write", "git add"]
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
