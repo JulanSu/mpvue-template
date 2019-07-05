@@ -9,6 +9,9 @@
     "dev": "node build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
+    "dev:my": "node build/dev-server.js my",
+    "start:my": "npm run dev:my",
+    "build:my": "node build/build.js my",
     "pretty-quick": "pretty-quick"
   },
   "dependencies": {

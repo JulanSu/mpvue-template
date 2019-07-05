@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <p class="title" @click="toNext">
-      我是第一个
-      <span>调往下一个页面</span>
+  <div @click="clickHandle">
+    <p class="title" @click="toBack">
+      我是第二个页面
     </p>
   </div>
 </template>
@@ -16,10 +15,8 @@ export default {
   },
 
   methods: {
-    toNext() {
-      mpvue.navigateTo({
-        url: "/pages/log/main"
-      });
+    toBack() {
+      mpvue.navigateBack();
     }
   },
 
